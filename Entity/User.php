@@ -92,6 +92,10 @@ class User implements UserInterface
         $this->metas = new ArrayCollection();
     }
 
+    public function __toString() {
+        return $this->getDisplayName();
+    }
+
     /**
      * @return int
      */
